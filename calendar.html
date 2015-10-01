@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Blog - Business Casual - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/business-casual.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div class="brand">Legislative Olongapo</div>
+    <div class="address-bar">3481 Melrose Place | Beverly Hills, CA 90210 | 123.456.7890</div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                <a class="navbar-brand" href="index.html">Legislative Olongapo</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+						<li>
+								<ul>
+									<a href="history.html"><h5>History of Olongapo City</h5></a>
+									<a href="legend.html"><h5>The Legend of Olongapo City</h5></a>
+									<a href="cityofficials.html"><h5>City Officials</h5></a>
+								</ul>
+							</li>
+                    </li>
+                    <li>
+                        <a href="calendar.html">Calendar of Activities</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Portal</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="box">
+                <div class="col-lg-12">
+                    <hr>
+                    <h2 class="intro-text text-center">
+                        <strong>Calendar of Activities</strong>
+                    </h2>
+                    <hr>
+                </div>
+<script type="text/javascript">	
+function initialCalendar(){
+		var hr = new XMLHttpRequest();
+		var url = "calendar_start.php";
+		var currentTime = new Date();
+		var month = currentTime.getMonth() + 1;
+		var year = currentTime.getFullYear();
+		showmonth = month;
+		showyear = year;
+		var vars = "showmonth="+showmonth+"&showyear="+showyear;
+		hr.open("POST",url,true);
+		hr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		hr.onreadystatechange = function () {
+				if(hr.readyState == 4 && hr.status == 200){
+						var return_data = hr.responseText;
+						document.getElementById("showCalendar").innerHTML=return_data;
+					}
+			}
+		hr.send(vars);
+		document.getElementById("showCalendar").innerHTML="processing....";
+	}
+</script>
+<script type="text/javascript">
+function next_month(){
+		var nextmonth = showmonth + 1;
+		if(nextmonth>12){
+				nextmonth = 1;
+				showyear = showyear + 1;
+			}
+		showmonth = nextmonth;
+		var hr = new XMLHttpRequest();
+		var url = "calendar_start.php";
+		var vars = "showmonth="+showmonth+"&showyear="+showyear;
+		hr.open("POST",url,true);
+		hr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		hr.onreadystatechange = function () {
+				if(hr.readyState == 4 && hr.status == 200){
+						var return_data = hr.responseText;
+						document.getElementById("showCalendar").innerHTML=return_data;
+					}
+			}
+		hr.send(vars);
+		document.getElementById("showCalendar").innerHTML="processing....";
+	}
+</script>
+<script type="text/javascript">
+function last_month(){
+		var lastmonth = showmonth - 1;
+		if(lastmonth<1){
+				lastmonth = 12;
+				showyear = showyear - 1;
+			}
+		showmonth = lastmonth;
+		var hr = new XMLHttpRequest();
+		var url = "calendar_start.php";
+		var vars = "showmonth="+showmonth+"&showyear="+showyear;
+		hr.open("POST",url,true);
+		hr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		hr.onreadystatechange = function () {
+				if(hr.readyState == 4 && hr.status == 200){
+						var return_data = hr.responseText;
+						document.getElementById("showCalendar").innerHTML=return_data;
+					}
+			}
+		hr.send(vars);
+		document.getElementById("showCalendar").innerHTML="processing....";
+	}
+</script>
+<script type="text/javascript">
+function overlay() {
+		el = document.getElementById("overlay");
+		el.style.display = (el.style.display == "block") ? "none" : "block";
+		el = document.getElementById("events");
+		el.style.display = (el.style.display == "block") ? "none" : "block";
+		el = document.getElementById("eventsBody");
+		el.style.display = (el.style.display == "block") ? "none" : "block";
+	}
+</script>
+<script type="text/javascript">
+function show_details(theId){
+		var deets = (theId.id);
+		el = document.getElementById("overlay");
+		el.style.display = (el.style.display == "block") ? "none" : "block";
+		el = document.getElementById("events");
+		el.style.display = (el.style.display == "block") ? "none" : "block";
+		var hr = new XMLHttpRequest();
+		var url="events.php";
+		var vars = "deets="+deets;
+		hr.open("POST",url,true);
+		hr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		hr.onreadystatechange = function () {
+				if(hr.readyState == 4 && hr.status == 200){
+						var return_data = hr.responseText;
+						document.getElementById("events").innerHTML=return_data;
+					}
+			}
+		hr.send(vars);
+		document.getElementById("events").innerHTML="processing....";	
+	}
+</script>
+
+<script type="text/javascript">
+function show_detailss(theId){
+		var deets = (theId.id);
+		el = document.getElementById("overlay");
+		el.style.display = (el.style.display == "block") ? "none" : "block";
+		el = document.getElementById("events");
+		el.style.display = (el.style.display == "block") ? "none" : "block";
+		var hr = new XMLHttpRequest();
+		var url="attend.php";
+		var vars = "deets="+deets;
+		hr.open("POST",url,true);
+		hr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		hr.onreadystatechange = function () {
+				if(hr.readyState == 4 && hr.status == 200){
+						var return_data = hr.responseText;
+						document.getElementById("events").innerHTML=return_data;
+					}
+			}
+		hr.send(vars);
+		document.getElementById("events").innerHTML="processing....";	
+	}
+</script>
+            </div>
+        </div>
+
+    </div>
+	<body onLoad="initialCalendar();">
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2></h2>
+						</header>
+						<div class="row 150%" align="center">
+							<div class="12u 12u$(medium)">
+									<!-- Content -->
+									<section id="sidebar">
+										<section>
+										<div class="container-fluid">
+										<div id="middle">
+
+											<div id="showCalendar"></div>
+										<div id="overlay">
+											<div id="events"></div>
+										</div>
+										
+								
+							</div>
+							</div>
+							
+						</div>
+					</div>
+				
+					
+				</div>
+    <!-- /.container -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p>Copyright &copy; Your Website 2014</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
