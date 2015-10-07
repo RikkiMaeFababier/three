@@ -34,4 +34,7 @@
 		<preference name="orientation" value="auto"/>
 		<preference name="fullscreen" value="true"/>
 		<preference name="target-device" value="universal"/>
+		<preference name="PageLength" 				  value="0"/>
+	<preference name="PaginationBreakingMode"     value="page"/>
+	<preference name="PaginationMode" 			  value="leftToRight"/>
 </widget>
