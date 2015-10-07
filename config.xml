@@ -1,6 +1,6 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="gcccssubjectsadvising" version="1.2.0" versionCode="15">
 	<script id="gcccssubjectsadvising"/>
-		<name>GC CCS SUBJECTS ADVISING</name>
+		<name>Legislative Olongapo</name>
 		<description>The application for Gordon College on getting information from students.</description>
 		<author>Ashbee Morgado</author>
 		
