@@ -113,7 +113,7 @@
 						});
 
 						function getdata( pageno ){                     
-							var targetURL = 'search_results.php?page=' + pageno;   
+							var targetURL = 'http://gcccs.org/LEGO/LEGO/search_results.php?page=' + pageno;   
 
 							$('#retrieved-data').html('<p><img src="img/ajax-loader.gif" /></p>');        
 							$('#retrieved-data').load( targetURL ).hide().fadeIn('slow');
