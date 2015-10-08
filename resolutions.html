@@ -105,20 +105,7 @@
 							<img src="img/ajax-loader.gif" />
 						</div>
 
-						<script src="js/jquery-1.8.2.min.js"></script>
-						<script type = "text/javascript">
-						$(function() {
-							//call the function onload
-							getdata( 1 );
-						});
-
-						function getdata( pageno ){                     
-							var targetURL = 'search_resolution.php?page=' + pageno;   
-
-							$('#retrieved-data').html('<p><img src="img/ajax-loader.gif" /></p>');        
-							$('#retrieved-data').load( targetURL ).hide().fadeIn('slow');
-						}      
-						</script>
+						
 					 </div>
                 <div class="clearfix"></div>
             </div>
@@ -143,7 +130,7 @@
 $(document).ready(function(){
 		$.ajax({
       		type:'GET',
-      		url: 'searchresolution.php',
+      		url: 'http://gcccs.org/LEGO/LEGO/searchresolution.php',
       		dataType: "html",  
       		data: {},
       			success:function(data) {
@@ -156,6 +143,20 @@ $(document).ready(function(){
 	
 		});
 </script>
+<script src="js/jquery-1.8.2.min.js"></script>
+						<script type = "text/javascript">
+						$(function() {
+							//call the function onload
+							getdata( 1 );
+						});
+
+						function getdata( pageno ){                     
+							var targetURL = 'http://gcccs.org/LEGO/LEGO/search_resolution.php?page=' + pageno;   
+
+							$('#retrieved-data').html('<p><img src="img/ajax-loader.gif" /></p>');        
+							$('#retrieved-data').load( targetURL ).hide().fadeIn('slow');
+						}      
+						</script>
 </body>
 
 </html>
