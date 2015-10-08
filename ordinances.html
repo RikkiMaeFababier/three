@@ -105,20 +105,7 @@
 							<img src="img/ajax-loader.gif" />
 						</div>
 
-						<script src="js/jquery-1.8.2.min.js"></script>
-						<script type = "text/javascript">
-						$(function() {
-							//call the function onload
-							getdata( 1 );
-						});
-
-						function getdata( pageno ){                     
-							var targetURL = 'search_ordinances.php?page=' + pageno;   
-
-							$('#retrieved-data').html('<p><img src="img/ajax-loader.gif" /></p>');        
-							$('#retrieved-data').load( targetURL ).hide().fadeIn('slow');
-						}      
-						</script>
+						
 					 </div>
                 <div class="clearfix"></div>
             </div>
@@ -144,7 +131,7 @@ $(document).ready(function(){
 alert("asda");
 		$.ajax({
       		type:'GET',
-      		url: 'searchordinances.php',
+      		url: 'http://gcccs.org/LEGO/LEGO/searchordinances.php',
       		dataType: "html",  
       		data: {},
       			success:function(data) {
@@ -157,6 +144,20 @@ alert("asda");
 	
 		});
 </script>
+<script src="js/jquery-1.8.2.min.js"></script>
+						<script type = "text/javascript">
+						$(function() {
+							//call the function onload
+							getdata( 1 );
+						});
+
+						function getdata( pageno ){                     
+							var targetURL = 'http://gcccs.org/LEGO/LEGO/search_ordinances.php?page=' + pageno;   
+
+							$('#retrieved-data').html('<p><img src="img/ajax-loader.gif" /></p>');        
+							$('#retrieved-data').load( targetURL ).hide().fadeIn('slow');
+						}      
+						</script>
 </body>
 
 </html>
