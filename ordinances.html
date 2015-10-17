@@ -62,7 +62,7 @@
 									<a href="legend.html"><h5>The Legend of Olongapo City</h5></a>
 									<a href="cityofficials.html"><h5>City Officials</h5></a>
 								</ul>
-							</li>
+						</li>
                     </li>
                     <li>
                         <a href="#">Portal</a>
@@ -72,6 +72,11 @@
 									<a href="ordinances.html"><h5>City Ordinances</h5></a>
 								</ul>
 							</li>
+                    </li>
+					<li>
+					
+                        <a href="calendar.html">Calendar of Activities	</a>
+						
                     </li>
                 </ul>
             </div>
@@ -93,8 +98,15 @@
                 </div>
                 <div class="col-md-6">
                     <img class="img-responsive img-border-left" src="img/slide-2.jpg" alt="">
-					<span id="officials"></span>
+					
 				<br />
+				<div class="form">
+	<form id="frmAddMsg" class="form">
+	<div class="input-group"><span class="input-group-addon glyphicon glyphicon-search"></span><input type="text" id="txtUsername" name="search" placeholder="Search Year or Title" style="font-size: 18px;"/></div>
+	
+	</form><br />
+	<button class="btn btn-alert btn-lg" id="btnSubmit">SUBMIT</button>
+</div>
                 </div>
                 <div class="col-md-6">
 				
@@ -105,10 +117,25 @@
 							<img src="img/ajax-loader.gif" />
 						</div>
 
-						
+						<script src="js/jquery-1.8.2.min.js"></script>
+						<script type = "text/javascript">
+						$(function() {
+							//call the function onload
+							getdata( 1 );
+						});
+
+						function getdata( pageno ){                     
+							var targetURL = 'http://gcccs.org/LEGO/LEGO/search_ordinances.php?page=' + pageno;   
+
+							$('#retrieved-data').html('<p><img src="img/ajax-loader.gif" /></p>');        
+							$('#retrieved-data').load( targetURL ).hide().fadeIn('slow');
+						}      
+						</script>
 					 </div>
                 <div class="clearfix"></div>
             </div>
+            </div>
+			<a href="javascript:history.back()" class="input-group-addon glyphicon glyphicon-chevron-left"></a><br />
         </div>
 
     <footer>
@@ -126,37 +153,29 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <script>
-$(document).ready(function(){
-		$.ajax({
-      		type:'GET',
-      		url: 'http://gcccs.org/LEGO/LEGO/searchordinances.php',
-      		dataType: "html",  
-      		data: {},
+	$(document).ready(function(){
+		console.log("It Works");
+		
+		//start new ajax
+		$('#btnSubmit').click(function(){
+			$.ajax({
+      			type:'POST',
+      			url:'http://gcccs.org/LEGO/LEGO/searchordinances.php',
+      			dataType: "html",  
+      			data: $('#frmAddMsg').serialize(),
       			success:function(data) {
         			if(data) {   
-            				$('#officials').html(data);
+            				$('#retrieved-data').html(data);
         			} else {
       				}
     			}
    		});
-	
-		});
+
+		});	
+	});
 </script>
-<script src="js/jquery-1.8.2.min.js"></script>
-						<script type = "text/javascript">
-						$(function() {
-							//call the function onload
-							getdata( 1 );
-						});
-
-						function getdata( pageno ){                     
-							var targetURL = 'http://gcccs.org/LEGO/LEGO/search_ordinances.php?page=' + pageno;   
-
-							$('#retrieved-data').html('<p><img src="img/ajax-loader.gif" /></p>');        
-							$('#retrieved-data').load( targetURL ).hide().fadeIn('slow');
-						}      
-						</script>
 </body>
 
 </html>
