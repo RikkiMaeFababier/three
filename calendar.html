@@ -29,11 +29,9 @@
     <![endif]-->
 
 </head>
+<body onLoad="initialCalendar();">
 
-<body>
-
-    <div class="brand">Legislative Olongapo</div>
-    <div class="address-bar">3481 Melrose Place | Beverly Hills, CA 90210 | 123.456.7890</div>
+    <div class="brand">Calendar of Activities</div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default" role="navigation">
@@ -63,13 +61,21 @@
 									<a href="legend.html"><h5>The Legend of Olongapo City</h5></a>
 									<a href="cityofficials.html"><h5>City Officials</h5></a>
 								</ul>
+						</li>
+                    </li>
+                    <li>
+                        <a href="#">Portal</a>
+						<li>
+								<ul>
+									<a href="resolutions.html"><h5>Resolutions</h5></a>
+									<a href="ordinances.html"><h5>City Ordinances</h5></a>
+								</ul>
 							</li>
                     </li>
-                    <li>
-                        <a href="calendar.html">Calendar of Activities</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Portal</a>
+					<li>
+					
+                        <a href="calendar.html">Calendar of Activities	</a>
+						
                     </li>
                 </ul>
             </div>
@@ -89,7 +95,34 @@
                     </h2>
                     <hr>
                 </div>
-<script type="text/javascript">	
+				<div class="col-md-12">
+<div id="showCalendar" align="center"></div>
+										<div id="overlay">
+											<div id="events"></div>
+										</div>
+				</div>
+            
+        </div>	
+		</div>
+    <a href="javascript:history.back()" class="input-group-addon glyphicon glyphicon-chevron-left"></a><br />
+</div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+				
+                    <p>© kiXtArt. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">	
 function initialCalendar(){
 		var hr = new XMLHttpRequest();
 		var url = "http://gcccs.org/LEGO/LEGO/calendar_start.php";
@@ -175,7 +208,7 @@ function show_details(theId){
 		el = document.getElementById("events");
 		el.style.display = (el.style.display == "block") ? "none" : "block";
 		var hr = new XMLHttpRequest();
-		var url="http://gcccs.org/LEGO/LEGO/events.php";
+		var url="events.php";
 		var vars = "deets="+deets;
 		hr.open("POST",url,true);
 		hr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
@@ -212,57 +245,6 @@ function show_detailss(theId){
 		document.getElementById("events").innerHTML="processing....";	
 	}
 </script>
-            </div>
-        </div>
-
-    </div>
-	<body onLoad="initialCalendar();">
-
-			<!-- Main -->
-				<div id="main" class="wrapper style1">
-					<div class="container">
-						<header class="major">
-							<h2></h2>
-						</header>
-						<div class="row 150%" align="center">
-							<div class="12u 12u$(medium)">
-									<!-- Content -->
-									<section id="sidebar">
-										<section>
-										<div class="container-fluid">
-										<div id="middle">
-
-											<div id="showCalendar"></div>
-										<div id="overlay">
-											<div id="events"></div>
-										</div>
-										
-								
-							</div>
-							</div>
-							
-						</div>
-					</div>
-				
-					
-				</div>
-    <!-- /.container -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; Your Website 2014</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
 
 </body>
 
