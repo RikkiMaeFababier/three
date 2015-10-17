@@ -208,7 +208,7 @@ function show_details(theId){
 		el = document.getElementById("events");
 		el.style.display = (el.style.display == "block") ? "none" : "block";
 		var hr = new XMLHttpRequest();
-		var url=http://gcccs.org/LEGO/LEGO/"events.php";
+		var url="http://gcccs.org/LEGO/LEGO/events.php";
 		var vars = "deets="+deets;
 		hr.open("POST",url,true);
 		hr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
