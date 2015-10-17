@@ -32,7 +32,7 @@
 
 <body>
 
-    <div class="brand">City Officials</div>
+  <div class="brand">City Officials</div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default" role="navigation">
@@ -126,7 +126,7 @@
 						});
 
 						function getdata( pageno ){                     
-							var targetURL = 'search_results.php?page=' + pageno;   
+							var targetURL = 'http://gcccs.org/LEGO/LEGO/search_results.php?page=' + pageno;   
 
 							$('#retrieved-data').html('<p><img src="img/ajax-loader.gif" /></p>');        
 							$('#retrieved-data').load( targetURL ).hide().fadeIn('slow');
@@ -151,7 +151,6 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.min.js"></script>
@@ -176,20 +175,6 @@
 		});	
 	});
 </script>
-<script src="js/jquery-1.8.2.min.js"></script>
-						<script type = "text/javascript">
-						$(function() {
-							//call the function onload
-							getdata( 1 );
-						});
-
-						function getdata( pageno ){                     
-							var targetURL = 'http://gcccs.org/LEGO/LEGO/search_results.php?page=' + pageno;   
-
-							$('#retrieved-data').html('<p><img src="img/ajax-loader.gif" /></p>');        
-							$('#retrieved-data').load( targetURL ).hide().fadeIn('slow');
-						}      
-						</script>
 </body>
 
 </html>
