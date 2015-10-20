@@ -30,9 +30,7 @@
 		<feature name="Media">
 			<param name="android-package" value="org.apache.cordova.media.AudioHandler"/>
 		</feature>
-<application
-     android:debuggable="false">
-<application/>
+
 		<preference name="orientation" value="auto"/>
 		<preference name="fullscreen" value="true"/>
 		<preference name="target-device" value="universal"/>
