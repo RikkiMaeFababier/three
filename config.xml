@@ -1,4 +1,4 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="legislativeolongapo" version="1.2.0" versionCode="16">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="legislativeolongapo" version="1.2.0" versionCode="17">
 	<script id="legislativeolongapo"/>
 		<name>Legislative Olongapo</name>
 		<description>The application for Olongapeños.</description>
@@ -13,7 +13,7 @@
 		</gap:platforms>
 
 		<gap:plugin name="org.apache.cordova.media"/>
-		<icon src="img/logo.png" gap:role="default"/>
+		<icon src="img/logo.jpg" gap:role="default"/>
 
 		<preference name="phonegap-version" value="3.6.3"/>
 		<feature name="http://api.phonegap.com/1.0/device"/>
