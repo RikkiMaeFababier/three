@@ -1,4 +1,4 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="legislativeolongapo" version="1.2.0" versionCode="18">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="legislativeolongapo" version="1.2.0" versionCode="19">
 	<script id="legislativeolongapo"/>
 		<name>Legislative Olongapo</name>
 		<description>The application for Olongapeños.</description>
