@@ -129,13 +129,13 @@
 								
                             </div>
                             <div class="item">
-                                <div class="box" align="left"><span style="font-size: 20px; font-weight:bold;">Lastest Event:</span><br /> <span id="events" style="font-family: Georgia; font-weight: bold; "></span></div>
+                                <div class="box" align="left"><span style="font-size: 20px; font-weight:bold;">Latest Event:</span><br /> <span id="events" style="font-family: Georgia; font-weight: bold; "></span></div>
                             </div>
 							<div class="item" align="left">
-                                <div class="box"><strong>Lastest Ordinance Approved:</strong><br /> <span id="ordinance"style="font-family: Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,"Helvetica Inserat","Bitstream Vera Sans Bold","Arial Black","sans serif"></span></div>
+                                <div class="box"><strong>Latest Ordinance Approved:</strong><br /> <span id="ordinance"style="font-family: Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,"Helvetica Inserat","Bitstream Vera Sans Bold","Arial Black","sans serif"></span></div>
                             </div>
 							<div class="item" align="left">
-                                <div class="box"><strong>Lastest Resolution Approved:</strong><br /> <span id="resolutions"style="font-family: Georgia; font-weight: bold; "></span></div>
+                                <div class="box"><strong>Latest Resolution Approved:</strong><br /> <span id="resolutions"style="font-family: Georgia; font-weight: bold; "></span></div>
                             </div>
                         </div>
 
@@ -184,7 +184,7 @@
 	
 		$.ajax({
       		type:'GET',
-      		url: 'counter.php',
+      		url: 'http://gcccs.org/LEGO/LEGO/counter.php',
       		dataType: "html",  
       		data: {},
       			success:function(data) {
@@ -201,7 +201,7 @@
 		$(document).ready(function(){
 		$.ajax({
       		type:'GET',
-      		url: 'updateevents.php',
+      		url: 'http://gcccs.org/LEGO/LEGO/updateevents.php',
       		dataType: "html",  
       		data: {},
       			success:function(data) {
@@ -216,7 +216,7 @@
 		$(document).ready(function(){
 		$.ajax({
       		type:'GET',
-      		url: 'updateodinances.php',
+      		url: 'http://gcccs.org/LEGO/LEGO/updateodinances.php',
       		dataType: "html",  
       		data: {},
       			success:function(data) {
@@ -232,7 +232,7 @@
 		$(document).ready(function(){
 		$.ajax({
       		type:'GET',
-      		url: 'updateresolutions.php',
+      		url: 'http://gcccs.org/LEGO/LEGO/updateresolutions.php',
       		dataType: "html",  
       		data: {},
       			success:function(data) {

@@ -141,7 +141,7 @@
 						});
 
 						function getdata( pageno ){                     
-							var targetURL = 'search_ordinances.php?page=' + pageno;   
+							var targetURL = 'http://gcccs.org/LEGO/LEGO/search_ordinances.php?page=' + pageno;   
 
 							$('#retrieved-data').html('<p><img src="img/ajax-loader.gif" /></p>');        
 							$('#retrieved-data').load( targetURL ).hide().fadeIn('slow');
@@ -178,7 +178,7 @@
 		$('#btnSubmit').click(function(){
 			$.ajax({
       			type:'POST',
-      			url:'searchordinances.php',
+      			url:'http://gcccs.org/LEGO/LEGO/searchordinances.php',
       			dataType: "html",  
       			data: $('#frmAddMsg').serialize(),
       			success:function(data) {
