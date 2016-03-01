@@ -35,7 +35,6 @@
 
     <div class="brand">Legislative Olongapo</div>
 
-    <!-- Navigation -->
     <nav class="navbar navbar-default" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -51,9 +50,8 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-				 <div class="row">
-				<div class="col-xs-8 text-center">
+                <div class="row">
+				<div class="col-xs-4 text-center">
                     
                         <a href="home.html"><img src="img/home.jpg" style="width: 50%"/></a>
                     
@@ -95,13 +93,13 @@
 					</div>
 					
 				</div>
-				
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
+
     <div class="container">
 
         <div class="row">
@@ -131,13 +129,13 @@
 								
                             </div>
                             <div class="item">
-                                <div class="box" align="left"><span style="font-size: 20px; font-weight:bold;">Latest Event:</span><br /> <span id="events" style="font-family: Georgia; font-weight: bold; "></span></div>
+                                <div class="box" align="left"><span style="font-size: 20px; font-weight:bold;">Lastest Event:</span><br /> <span id="events" style="font-family: Georgia; font-weight: bold; "></span></div>
                             </div>
 							<div class="item" align="left">
-                                <div class="box"><strong>Latest Ordinance Approved:</strong><br /> <span id="ordinance"style="font-family: Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,"Helvetica Inserat","Bitstream Vera Sans Bold","Arial Black","sans serif"></span></div>
+                                <div class="box"><strong>Lastest Ordinance Approved:</strong><br /> <span id="ordinance"style="font-family: Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,"Helvetica Inserat","Bitstream Vera Sans Bold","Arial Black","sans serif"></span></div>
                             </div>
 							<div class="item" align="left">
-                                <div class="box"><strong>Latest Resolution Approved:</strong><br /> <span id="resolutions"style="font-family: Georgia; font-weight: bold; "></span></div>
+                                <div class="box"><strong>Lastest Resolution Approved:</strong><br /> <span id="resolutions"style="font-family: Georgia; font-weight: bold; "></span></div>
                             </div>
                         </div>
 
@@ -186,7 +184,7 @@
 	
 		$.ajax({
       		type:'GET',
-      		url: 'http://gcccs.org/LEGO/LEGO/counter.php',
+      		url: 'counter.php',
       		dataType: "html",  
       		data: {},
       			success:function(data) {
@@ -203,7 +201,7 @@
 		$(document).ready(function(){
 		$.ajax({
       		type:'GET',
-      		url: 'http://gcccs.org/LEGO/LEGO/updateevents.php',
+      		url: 'updateevents.php',
       		dataType: "html",  
       		data: {},
       			success:function(data) {
@@ -218,7 +216,7 @@
 		$(document).ready(function(){
 		$.ajax({
       		type:'GET',
-      		url: 'http://gcccs.org/LEGO/LEGO/updateodinances.php',
+      		url: 'updateodinances.php',
       		dataType: "html",  
       		data: {},
       			success:function(data) {
@@ -234,7 +232,7 @@
 		$(document).ready(function(){
 		$.ajax({
       		type:'GET',
-      		url: 'http://gcccs.org/LEGO/LEGO/updateresolutions.php',
+      		url: 'updateresolutions.php',
       		dataType: "html",  
       		data: {},
       			success:function(data) {

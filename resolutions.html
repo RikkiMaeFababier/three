@@ -35,7 +35,7 @@
     <div class="brand">Resolutions</div>
 
     <!-- Navigation -->
-  <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-default" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -50,9 +50,8 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-				 <div class="row">
-				<div class="col-xs-8 text-center">
+                <div class="row">
+				<div class="col-xs-4 text-center">
                     
                         <a href="home.html"><img src="img/home.jpg" style="width: 50%"/></a>
                     
@@ -94,13 +93,13 @@
 					</div>
 					
 				</div>
-				
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
+
 
     <div class="container">
 
@@ -142,7 +141,7 @@
 						});
 
 						function getdata( pageno ){                     
-							var targetURL = 'http://gcccs.org/LEGO/LEGO/search_resolution.php?page=' + pageno;   
+							var targetURL = 'search_resolution.php?page=' + pageno;   
 
 							$('#retrieved-data').html('<p><img src="img/ajax-loader.gif" /></p>');        
 							$('#retrieved-data').load( targetURL ).hide().fadeIn('slow');
@@ -180,7 +179,7 @@
 		$('#btnSubmit').click(function(){
 			$.ajax({
       			type:'POST',
-      			url:'http://gcccs.org/LEGO/LEGO/searchresolution.php',
+      			url:'searchresolution.php',
       			dataType: "html",  
       			data: $('#frmAddMsg').serialize(),
       			success:function(data) {
