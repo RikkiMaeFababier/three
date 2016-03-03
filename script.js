@@ -78,8 +78,8 @@ function showWindow(data)
 	$('body').append('<div id="windowBox"><div id="titleDiv">'+title+'</div>'+body+'<div id="date">'+date+'</div></div>');
 
 	$('#windowBox').css({
-		width:500,
-		height:350,
+		width:auto,
+		height:auto,
 		left: ($(window).width() - 500)/2,
 		top: ($(window).height() - 350)/2
 	});

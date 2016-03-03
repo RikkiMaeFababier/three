@@ -47,9 +47,9 @@ li span{
 	/* The event icon */
 	display:block;
 	float:left;
-	height:auto;
+	height:16px;
 	margin-right:5px;
-	width:auto;
+	width:16px;
 }
 
 /* Individual background images for each type of event: */
@@ -61,7 +61,6 @@ li.milestone span.icon { 	background:url(img/icons/chart.png) no-repeat; }
 div.content{
 	/* This div contains additional data for the content */
 	display:none;
-	width: auto;
 }
 
 .eventHeading{
@@ -173,6 +172,8 @@ div.content{
 	/* Shows details about the event on click */
 	position:absolute;
 	z-index:20;
+	left: 0px;
+    top: 200px;
 	background-color:#fcfcfc;
 	padding:10px;
 	border:2px solid #666666;
